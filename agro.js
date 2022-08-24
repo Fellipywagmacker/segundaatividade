@@ -10,7 +10,7 @@ const sub = document.querySelectorAll('h2');
             
             const retornar = document.createElement('a');
             retornar.setAttribute('href', '#');
-            retornar.textContent = "Ir para lista";
+            retornar.textContent = "Voltar pra Sumário";
             element.parentElement.insertBefore(retornar, element.nextElementSibling);
         });
         const org = document.createElement('ol');
@@ -27,4 +27,13 @@ const sub = document.querySelectorAll('h2');
         });
 
 
+var dataAtual = new Date()
+var dia = dataAtual.getDate()
+var mes = (dataAtual.getMonth() + 1)
+var ano = dataAtual.getFullYear()
+var horas = dataAtual.getHours()
+var minutos = dataAtual.getMinutes()
+var div = document.getElementById('Horas')
+
+    div.innerHTML = `Hoje é dia ${dia} / ${mes} / ${ano}. </br> Agora são ${horas} : ${minutos}`
     
